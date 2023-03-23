@@ -1,15 +1,18 @@
 import { getServerSession } from "next-auth";
 import { FC } from "react";
+import SignInButton from "@/components/SignInButton";
+import { buttonVariants } from "@/ui/Button";
+import SignOutButton from "@/components/SignOutButton";
+import ThemeToggle from "@/components/ThemeToggle";
 
-interface NavbarProps {}
 
-const Navbar = async ({}) => {
+const Navbar = async () => {
   const session = await getServerSession();
 
   return (
     <div className="fixed backdrop-blur-sm bg-white/75 dark:bg-slate-900 z-50 top-0 left-0 right-0 h-20 border-b border-slate-300 dark:border-slate-700 shadow-sm flex items-cnter justify-between">
       <div className="container max-w-7xl mx-auto w-full flex justify-between items-center">
-        <link href="/" className={buttonVarients({ varients: "link" })}>
+        <link href="/" className={buttonVariants({ variant: "link" })}>
           Text similarity 1.0
         </link>
         <div className="md:hidden">
@@ -19,7 +22,7 @@ const Navbar = async ({}) => {
           <ThemeToggle />
           <link
             href="/documentation"
-            className={buttonVarients({ varients: "ghost" })}
+            className={buttonVariants({ variant: "ghost" })}
           >
             Documentation
           </link>
@@ -27,7 +30,7 @@ const Navbar = async ({}) => {
             <>
               <link
                 href="/dashboard"
-                className={buttonVarients({ varients: "ghost" })}
+                className={buttonVariants({ variant: "ghost" })}
               >
                 Dashboard
               </link>
