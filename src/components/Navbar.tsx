@@ -6,7 +6,6 @@ import SignOutButton from "@/components/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
 import Link from "next/link";
 
-
 const Navbar = async () => {
   const session = await getServerSession();
 
@@ -19,6 +18,7 @@ const Navbar = async () => {
         <div className="md:hidden">
           <ThemeToggle />
         </div>
+
         <div className="hidden md:flex gap-4">
           <ThemeToggle />
           <Link

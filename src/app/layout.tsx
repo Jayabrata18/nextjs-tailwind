@@ -23,7 +23,7 @@ export default function RootLayout({
           <Navbar />
           <Toaster position="bottom-right" />
 
-          {/* <main>{children}</main> */}
+          <main>{children}</main>
         </Providers>
         {/* allow for more height on mobile device */}
         <div className="h-40 md:hidden" />

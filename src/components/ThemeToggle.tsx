@@ -27,14 +27,13 @@ const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" forceMount>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Icons.Moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
-        </DropdownMenuItem>
-
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Icons.Sun className="mr-2 h-4 w-4" />
           <span>Light</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          <Icons.Moon className="mr-2 h-4 w-4" />
+          <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.Laptop className="mr-2 h-4 w-4" />
