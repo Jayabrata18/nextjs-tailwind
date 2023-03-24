@@ -8,7 +8,7 @@ import { toast } from "./ui/Toast";
 interface SignOutButtonProps {}
 
 const SignOutButton: FC<SignOutButtonProps> = ({}) => {
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
+  const [isLoading, setIsLoading] = useState<any>(false);
 
   const signUserOut = async () => {
     setIsLoading(true);
@@ -23,10 +23,10 @@ const SignOutButton: FC<SignOutButtonProps> = ({}) => {
     }
   };
   return (
-    // <Button onClick={signUserOut} isLoading={isLoading}>
-    //   Sign out
-    // </Button>
-    <Button onClick={signUserOut}>Sign out</Button>
+    <Button onClick={signUserOut} isLoading={isLoading}>
+      Sign out
+    </Button>
+    // <Button onClick={signUserOut}>Sign out</Button>
   );
 };
 

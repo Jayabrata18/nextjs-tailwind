@@ -9,7 +9,7 @@ import { toast } from './ui/Toast'
 interface SignInButtonProps {}
 
 const SignInButton: FC<SignInButtonProps> = ({}) => {
-    const [isLoading, setIsLoading] = useState<Boolean>(false)
+    const [isLoading, setIsLoading] = useState<any>(false)
 
     const signInWithGoogle = async () => {
         setIsLoading(true)
@@ -25,8 +25,8 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
         }
     }
     return (
-        // <Button onClick={signInWithGoogle} isLoading={isLoading}>Sign in</Button>
-        <Button onClick={signInWithGoogle} >Sign in</Button>
+        <Button onClick={signInWithGoogle} isLoading={isLoading}>Sign in</Button>
+        // <Button onClick={signInWithGoogle} >Sign in</Button>
     )
 }
 // 
